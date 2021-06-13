@@ -5,6 +5,9 @@ public class Post {
     private int postData;                   // Дата публикации поста
     private int postTime;                   // Время публикации поста
     private int ownerPostId;                // ID владельца поста
+    private boolean ownersOnly;             // manager - искать только записи от имени владельца стены.
+    private String postDomain;              // manager - короткий адрес пользователя или сообщества.
+    private String postQuery;               // manager - поисковой запрос. Для точного результата запрос необходимо передавать в двойных кавычках.
 
     private int authorPostId;               // v2 поле created_by - ID автора, который опубликовал запись
                                             // (не учел, что авторы и владельцы группы могут отличаться)
@@ -39,4 +42,5 @@ public class Post {
 
     private PostSource postSource;          // v2 информация о способе размещения записи
                                             // не прописал варианты размещения записи
+    // + get/set на все поля
 }
